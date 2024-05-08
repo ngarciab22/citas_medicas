@@ -22,7 +22,8 @@ app.get("/randomuser", async (req, res) => {
         users.push(newUser); //Guarda el usuario en el array
         const [male, female] = _.partition(users, user => user.gender === 'male'); //Divide los usuarios por genero
         const mensaje = 
-        `Mujeres:
+        `<h1>Registro de citas médicas</h1>
+        Mujeres:
             <ol>
             ${female.map(user => `<li>Nombre: ${user.name} - Apellido: ${user.lastname} - ID: ${user.id} - Timestamp: ${user.date}</li>`).join('')}
             </ol>
